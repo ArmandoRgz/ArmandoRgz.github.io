@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sábalo Country Occult Club</title>
+        <title>Armando Rodríguez</title>
         <link href="./src/css/index.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+Pro:ital@0;1&display=swap" rel="stylesheet">
-        <link rel="icon" href="./src/img/logo.svg">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="cont">
-            <header>
-                <h1>Sábalo Country Occult Club</h1>
-            </header>
-            <main>
+        <main>
+            <div class="corner">
+                <header>
+                    <h1>Armando Rodríguez</h1>
+                    <p>Web Developer</p>
+                </header>
                 <nav>
-                    <img src="./src/img/logo.svg" alt="logo">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">Index</a></li>
-                        <li><a href="/">About</a></li>
+                        <li id="home"><a href="/">Home</a></li>
+                        <li id="projects"><a href="/">Projects</a></li>
+                        <li id="about"><a href="/">About</a></li>
                     </ul>
                 </nav>
-                <section>
-                    <article>
-                        <img src="./src/img/01.jpg" alt="photo 1">
-                        <div>
-                            <h2>Black Star of June sighting at El Faro Hill</h2>
-                        <p>Members Armando, Franco and Mario of the Sabalo Country Occult Club gathered at Mazatlan's El Faro Hill to witness the Black Star of June appearance on March 12 at approximately 06:00 a.m. Contrary to popular belief, the Black Star of June phenomenon can appear at any time of the year; lasting an average time of two hours and fifteen minutes, according to previous records of the club. The members at present took photographs of the phenomenon using wide spectrum cameras, with the intention of documenting its physical appearance for the club's archives.</p>
-                        <p>Text by Armando Rodriguez, photograph by Mario Flores.</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./src/img/02.jpg" alt="photo 2">
-                        <div>
-                            <h2>Third Literary Research Session of the spring semester</h2>
-                            <p>Members from different generations of the Sabalo Country Occult Club were reunited on the first day or March at the school's library at 03:00 p.m. to gather and analyze literary material regarding the topic of unexplained phenomena recorded within the city. Students David and Salma were responsible for guiding and advising the new club members on following the standardized format to document secondary information into the club's archives, as well as identifying reliable sources of information from both printed and online media. Their findings will be discussed at a later date at the club's base of operations.</p>
-                            <p>Text by Armando Rodriguez, photograph by Mario Flores</p>
-                        </div>
-                    </article>
-                </section>
-            </main>
-        </div>
-        <footer>
-            <p>Website designed and mantained by the crimson blood mage: <a href="https://twitter.com/cbMage">@cbMage</a></p>
-        </footer>
+            </div>
+            <div class="projects content" id="projects_content">
+                <ul>
+                    <li><a href="https://lumicow.net" target="_blank">2023 / Commission <h1>Lumicow</h1></a></li>
+                    <li><a href="/">2023 / Portfolio <h1>Sábalo Country Occult Club</h1></a></li>
+                </ul>
+            </div>
+            <div class="about content" id="about_content">
+                <div class="pbox">
+                    <p>Web developer for freelance or corporate work. I am currently completing a certification in Full Stack web development from the Oracle ONE program, while I study CSS and JavaScript on my own. Expert in prototyping of products and services; Graphic design enthusiast in general.</p>
+                    <p><a href="./src/docs/cv.pdf" target="_blank">resume</a><br><a href="https://www.linkedin.com/in/armandorgz/" target="_blank">linkedIn</a><br><a href="https://twitter.com/cbMage" target="_blank">twitter</a><br><a href="https://www.instagram.com/chrshdsrcrr/" target="_blank">instagram</a></p>
+                    <p>Website design completely inspired by <a href="https://p5aholic.me/info/" target="_blank">Keita Yamada's work</a></p>
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript">
+            document.getElementById("home").onclick = function() {
+                document.getElementById("projects_content").style.display = "none";
+            }
+
+            document.getElementById("projects").onclick = function() {
+                document.getElementById("projects_content").style.display = "block";
+                document.getElementById("about_content").style.display = "none";
+            }
+
+            document.getElementById("about").onclick = function() {
+                document.getElementById("projects_content").style.display = "none";
+                document.getElementById("about_content").style.display = "block";
+            }
+        </script> 
     </body>
 </html>
