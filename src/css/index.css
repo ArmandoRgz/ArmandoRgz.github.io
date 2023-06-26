@@ -1,9 +1,20 @@
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 :root {
     box-sizing: border-box;
 }
 
 *, ::before, ::after {
     box-sizing: inherit;
+    animation: appear 1s;
 }
 
 body {
@@ -52,18 +63,29 @@ li {
     margin: 1rem auto;
 }
 
-li:hover {
+nav li {
+    transition: opacity .4s;
+}
+
+nav li:hover {
     cursor:pointer;
+    opacity: 20%;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: opacity .4s;
+}
+
+a:hover {
+    opacity: 20%;
 }
 
 .content {
     margin: 10% 0 0 0;
     display: none;
+    transition: display .5s;
 }
 
 .projects > * {
@@ -90,3 +112,4 @@ a {
 .pbox a {
     font-weight: 700;
 }
+

@@ -40,16 +40,26 @@
         <script type="text/javascript">
             document.getElementById("home").onclick = function() {
                 document.getElementById("projects_content").style.display = "none";
+                document.getElementById("about_content").style.display = "none";
+                document.getElementById("home").innerHTML = "_";
+                document.getElementById("projects").innerHTML = "Projects";
+                document.getElementById("about").innerHTML = "About";
             }
 
             document.getElementById("projects").onclick = function() {
                 document.getElementById("projects_content").style.display = "block";
                 document.getElementById("about_content").style.display = "none";
+                document.getElementById("projects").innerHTML = "_";
+                document.getElementById("home").innerHTML = "Home";
+                document.getElementById("about").innerHTML = "About";
             }
 
             document.getElementById("about").onclick = function() {
                 document.getElementById("projects_content").style.display = "none";
                 document.getElementById("about_content").style.display = "block";
+                document.getElementById("about").innerHTML = "_";
+                document.getElementById("home").innerHTML = "Home";
+                document.getElementById("projects").innerHTML = "Projects";
             }
         </script> 
     </body>
