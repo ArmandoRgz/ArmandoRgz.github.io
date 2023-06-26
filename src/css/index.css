@@ -10,11 +10,14 @@
 
 :root {
     box-sizing: border-box;
+     --bg-color: #dfdfdf;
+     --text-color: #000000;
 }
 
 *, ::before, ::after {
     box-sizing: inherit;
     animation: appear 1s;
+    transition: color 3s ease-out, background-color 1.5s ease-out;
 }
 
 body {
@@ -22,12 +25,13 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: #dfdfdf;
+    background-color: var(--bg-color);
+    color: var(--text-color)
 }
 
 main {
     margin: 1.5rem;
-    border: 1.2px solid gray;
+    border: 1.2px solid #808080;
     height: calc(100% - 3rem);
     width: calc(100% - 3rem);
     display: flex;
@@ -44,10 +48,26 @@ h1 {
     margin: 0;
 }
 
-main p {
-    margin-top: -.8rem;
+p {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
+}
+
+main p {
+    margin-top: -.8rem;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav li {
+    transition: opacity .4s;
+}
+
+nav li:hover {
+    cursor:pointer;
+    opacity: 20%;
 }
 
 ul {
@@ -61,15 +81,6 @@ li {
     font-size: 1rem;
     font-weight: 500;
     margin: 1rem auto;
-}
-
-nav li {
-    transition: opacity .4s;
-}
-
-nav li:hover {
-    cursor:pointer;
-    opacity: 20%;
 }
 
 a {
@@ -113,3 +124,30 @@ a:hover {
     font-weight: 700;
 }
 
+.side {
+    position: fixed;
+    transform: rotate(-90deg);
+    display: flex;
+    top: 85%;
+    right: 95.3%;
+}
+
+.side p {
+    margin-top: 0;
+}
+
+.side p:hover {
+    cursor: pointer;
+}
+
+.side > * + * {
+    margin-left: 1rem;
+}
+
+#dark {
+    color: #000000;
+}
+
+#light {
+    color: #dfdfdf;
+}
