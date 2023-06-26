@@ -86,3 +86,7 @@ a {
 .pbox p {
     line-height: 150%;
 }
+
+.pbox a {
+    font-weight: 700;
+}
