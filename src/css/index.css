@@ -26,7 +26,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: var(--bg-color);
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 main {
@@ -35,6 +35,7 @@ main {
     height: calc(100% - 3rem);
     width: calc(100% - 3rem);
     display: flex;
+    overflow: scroll;
 }
 
 main > * {
@@ -150,4 +151,34 @@ a:hover {
 
 #light {
     color: #dfdfdf;
+}
+
+@media screen and (max-width: 1200px){
+    .side {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        display: block;
+    }
+
+    .content {
+        padding: inherit;
+        margin: inherit;
+    }
+
+    .projects {
+        margin: auto 3rem;
+    }
+
+    .about {
+        width: inherit;
+    }
+
+    .pbox {
+        margin: inherit;
+    }
+
 }
