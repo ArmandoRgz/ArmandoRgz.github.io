@@ -164,6 +164,10 @@ a:hover {
         overflow: scroll;
     }
 
+    .corner {
+        margin-bottom: 4rem;
+    }
+
     .content {
         padding: inherit;
         margin: inherit;
