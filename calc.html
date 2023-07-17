@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Age Calculator</title>
+        <link href="./src/css/projects.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="side">
+            <p id="light">Light</p>
+            <p id="dark">Dark</p>
+        </div>
+        <main>
+            <div class="container">
+                <h1>Age Calculator</h1>
+                <label for="fecha">
+                    <p>Enter your date of birth</p>
+                    <input type="date" id="fecha" value="" max="9999-12-31T23:59">
+                </label>
+                <button id="edad" onclick="calcAge()">Calculate</button>
+                <p id="answer">You are <span id="year">x</span> years old.</p>
+            </div>
+            <footer>
+                <p><a href="https://armandorgz.github.io/">Home</a></p>
+            </footer>
+        </main>
+        <script>
+            let root = document.querySelector(":root");
+            const currentdate = new Date().getFullYear();
+            const resp = document.getElementById("answer");
+            const year = document.getElementById("year");
+            const field = document.getElementById("fecha");
+
+            const calcAge = function(){
+                const birthdate = document.getElementById("fecha").value;
+                year.innerHTML = (currentdate - birthdate.slice(0,4));
+                resp.style.setProperty("display", "block");
+            }
+
+            document.getElementById("dark").onclick = function() {
+                root.style.setProperty('--bg-color', '#000000');
+                root.style.setProperty('--text-color', '#dfdfdf');
+            }
+
+            document.getElementById("light").onclick = function() {
+                root.style.setProperty('--bg-color', '#dfdfdf');
+                root.style.setProperty('--text-color', '#000000');
+            }
+
+            fecha.addEventListener("keyup", calcAge);
+
+        </script>
+    </body>
+</html>

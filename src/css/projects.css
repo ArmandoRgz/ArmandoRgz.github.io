@@ -1,0 +1,113 @@
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+:root {
+    box-sizing: border-box;
+     --bg-color: #dfdfdf;
+     --text-color: #000000;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+    animation: appear 1s;
+    transition: color 3s ease-out, background-color 1.5s ease-out;
+}
+
+body {
+    margin: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+main {
+    margin: 1.5rem;
+    border: 1.2px solid #808080;
+    height: calc(100% - 3rem);
+    width: calc(100% - 3rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    margin: .4rem 1.5rem;
+    max-height: 50%;
+}
+
+h1 {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 300;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.side {
+    position: fixed;
+    transform: rotate(-90deg);
+    display: flex;
+    top: 85%;
+    right: 95.3%;
+}
+
+.side p {
+    margin-top: 0;
+}
+
+.side p:hover {
+    cursor: pointer;
+}
+
+.side > * + * {
+    margin-left: 1rem;
+}
+
+#dark {
+    color: #000000;
+}
+
+#light {
+    color: #dfdfdf;
+}
+
+button {
+    transition: none;
+}
+
+#answer {
+    display: none;
+}
+
+footer {
+    align-self: end;
+    margin-right: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity .4s;
+}
+
+a:hover {
+    opacity: 20%;
+}
+
+@media screen and (max-width: 1200px){
+    .side {
+        display: none;
+    }
+}
