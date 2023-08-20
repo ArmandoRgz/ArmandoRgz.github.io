@@ -103,6 +103,11 @@ a:hover {
     margin: 0;
 }
 
+#projects_content {
+    overflow-y: scroll;
+    overflow-x: auto;
+}   
+
 .about {
     width: 40%;
     
@@ -150,10 +155,6 @@ a:hover {
 
     .projects {
         margin: auto 3rem;
-    }
-
-    #projects_content {
-        overflow: scroll;
     }
 
     .about {
