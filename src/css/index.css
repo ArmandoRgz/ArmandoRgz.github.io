@@ -150,6 +150,9 @@ a:hover {
 
     .projects {
         margin: auto 3rem;
+    }
+
+    #projects_content {
         overflow: scroll;
     }
 
