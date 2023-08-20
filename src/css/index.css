@@ -150,6 +150,7 @@ a:hover {
 
     .projects {
         margin: auto 3rem;
+        overflow: scroll;
     }
 
     .about {
