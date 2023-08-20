@@ -2,16 +2,41 @@
 <html>
     <head>
         <title>Fortune teller</title>
+        <link href="./src/css/projects.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=1024, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <article>
-            <header><h1>Fortune teller</h1></header>
-            <main class="">
-                <p>You</p>
-                <button>Consult your fate</button>
-            </main>
+        <main>
+            <div class="container">
+                <h1>Fortune teller</h1>
+                <p id="message" style="visibility: hidden;">You <span id="span1"></span> <span id="span2"></span> <span id="span3"></span>.</p>
+                <button id="button" onclick="buttonclick()">Consult your fate</button>
+            </div>
+            <footer>
+                <p><a href="https://armandorgz.github.io/">Home</a></p>
+            </footer>
             <script>
+                const button = document.getElementById("button");
+                const message = document.getElementById("message");
+                const span1 = document.getElementById("span1");
+                const span2 = document.getElementById("span2");
+                const span3 = document.getElementById("span3");
+
+                let bank1 = ["will", "won't", "might"];
+                let bank2 = ["have a disastrous morning", "get wonderful news", "discover your true nature", "find your hidden strength", "develop a new phobia"];
+                let bank3 = ["today", "tomorrow", "a year from now"];
+
+                const buttonclick = function(){
+                    console.log('click');
+                    span1.innerHTML = bank1[(Math.floor(Math.random()*3))];
+                    span2.innerHTML = bank2[(Math.floor(Math.random()*3))];
+                    span3.innerHTML = bank3[(Math.floor(Math.random()*3))];
+                    message.style.setProperty("visibility", "visible");
+                }
             </script>
-        </article>
+        </main>
     </body>
 </html>
