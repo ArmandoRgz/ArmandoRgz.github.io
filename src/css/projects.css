@@ -25,8 +25,8 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 
 main {
@@ -53,26 +53,6 @@ h1 {
 p {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
-}
-
-.side {
-    position: fixed;
-    transform: rotate(-90deg);
-    display: flex;
-    top: 85%;
-    right: 95.3%;
-}
-
-.side p {
-    margin-top: 0;
-}
-
-.side p:hover {
-    cursor: pointer;
-}
-
-.side > * + * {
-    margin-left: 1rem;
 }
 
 #dark {
@@ -104,10 +84,4 @@ a {
 
 a:hover {
     opacity: 20%;
-}
-
-@media screen and (max-width: 1200px){
-    .side {
-        display: none;
-    }
 }
