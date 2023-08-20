@@ -17,7 +17,7 @@
 *, ::before, ::after {
     box-sizing: inherit;
     animation: appear 1s;
-    transition: color .1s, background-color 1.5s, visibility 5s;
+    transition: color .1s, background-color 1.5s, opacity 1s;
 }
 
 body {
@@ -84,4 +84,8 @@ a {
 
 a:hover {
     opacity: 20%;
+}
+
+#message {
+    visibility: hidden;
 }

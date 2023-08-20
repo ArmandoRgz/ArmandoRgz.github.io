@@ -12,7 +12,7 @@
         <main>
             <div class="container">
                 <h1>Fortune teller</h1>
-                <p id="message" style="visibility: hidden;">You <span id="span1"></span> <span id="span2"></span> <span id="span3"></span>.</p>
+                <p id="message">You <span id="span1"></span> <span id="span2"></span> <span id="span3"></span>.</p>
                 <button id="button" onclick="buttonclick()">Consult your fate</button>
             </div>
             <footer>
@@ -29,11 +29,14 @@
                 let bank2 = ["have a disastrous morning", "get wonderful news", "discover your true nature", "find your hidden strength", "develop a new phobia"];
                 let bank3 = ["today", "tomorrow", "a year from now"];
 
+                message.style.setProperty("opacity", "0");
+
                 const buttonclick = function(){
                     console.log('click');
                     span1.innerHTML = bank1[(Math.floor(Math.random()*3))];
                     span2.innerHTML = bank2[(Math.floor(Math.random()*3))];
                     span3.innerHTML = bank3[(Math.floor(Math.random()*3))];
+                    message.style.setProperty("opacity", "100");
                     message.style.setProperty("visibility", "visible");
                 }
             </script>
